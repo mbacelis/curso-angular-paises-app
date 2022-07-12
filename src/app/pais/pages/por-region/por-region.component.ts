@@ -12,10 +12,16 @@ import { Component } from '@angular/core';
 })
 export class PorRegionComponent {
 
-  regiones: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania'];
+  regiones: string[] = ['EU', 'EFTA', 'CARICOM', 'PA', 'AU', 'USAN', 'EEU', 'AL', 'ASEAN', 'CAIS', 'CEFTA', 'NAFTA', 'SAARC'];
   regionActiva: string = '';
 
   constructor() { }
+
+  getClaseCSS(region: string): string {
+    return (region === this.regionActiva)
+      ? 'btn btn-primary'
+      : 'btn btn-outline-primary';
+  }
 
   activarRegion(region: string) {
     this.regionActiva = region;
