@@ -35,6 +35,8 @@ export class PorRegionComponent {
 
     this.paisService
       .buscarRegion(region)
-      .subscribe(resp => this.paises = resp);
+      .subscribe(resp => {
+        this.paises = resp
+      });
   }
 }
